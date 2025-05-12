@@ -7,9 +7,20 @@ import { motion, AnimatePresence } from "framer-motion"
 
 export function ThemeToggle({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = React.useState(false)
+  
+  // After component mounts, we can show the appropriate icon for the theme
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
   
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark")
+  }
+
+  // Only render theme toggle client-side to avoid hydration mismatch
+  if (!mounted) {
+    return <div className={`inline-flex items-center justify-center p-1 rounded-md h-7 w-7 ${className}`} />
   }
 
   return (

@@ -1,6 +1,6 @@
 import { HeroSection } from "@/components/blocks/hero-section-dark";
 import { NavbarDemo } from "@/components/blocks/navbar-demo";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -17,15 +17,15 @@ export default function Home() {
           ctaText="Get Started"
           ctaHref="/signup"
           bottomImage={{
-            light: "https://www.launchuicomponents.com/app-light.png",
-            dark: "https://www.launchuicomponents.com/app-dark.png",
+            light: "/Helo1.png",
+            dark: "/Helo.png",
           }}
           gridOptions={{
             angle: 65,
             opacity: 0.4,
             cellSize: 50,
-            lightLineColor: "#4a4a4a",
-            darkLineColor: "#2a2a2a",
+            lightLineColor: "#FF9800",
+            darkLineColor: "#FF6D00",
           }}
         />
       </div>
