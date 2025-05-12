@@ -196,7 +196,7 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
+  onClose, // eslint-disable-line @typescript-eslint/no-unused-vars
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>
